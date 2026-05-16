@@ -1,0 +1,28 @@
+{
+  "ports": {
+    "21":   "FTP",
+    "22":   "SSH",
+    "23":   "Telnet",
+    "80":   "HTTP",
+    "3306": "MySQL",
+    "5432": "PostgreSQL",
+    "6379": "Redis",
+    "8080": "HTTP-Alt"
+  },
+  "auto_block_enabled":   false,
+  "auto_block_threshold": 5,
+  "alert_method":         "all",
+  "log_level":            "INFO",
+  "max_recv_bytes":       1024,
+  "geoip_enabled":        true,
+  "daily_summary":        true,
+  "dashboard_port":       5000,
+  "pcap_enabled":         true,
+  "ssh_trap_enabled":     true,
+  "canary_enabled":       true,
+  "abuseipdb_key":        "",
+  "telegram": {
+    "token":   "YOUR_BOT_TOKEN_HERE",
+    "chat_id": "YOUR_CHAT_ID_HERE"
+  }
+}

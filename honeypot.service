@@ -1,0 +1,22 @@
+[Unit]
+Description=🍯 Local Honeypot Daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# ← غيّر المسار لمسار مشروعك الفعلي
+WorkingDirectory=/opt/honeypot
+ExecStart=/opt/honeypot/venv/bin/python3 /opt/honeypot/honeypot.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Security
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/opt/honeypot/logs /opt/honeypot/data
+
+[Install]
+WantedBy=multi-user.target
