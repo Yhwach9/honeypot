@@ -151,8 +151,3 @@ Session logs are saved as JSON in `logs/ssh_sessions/`.
 
 **HTTP:** The dashboard also listens for requests to paths like `/.env`, `/admin`, `/backup`. If someone finds the dashboard URL and probes for common vulnerable paths, it fires an alert.
 
----
-
-## Stack
-
-Python · socket · threading · paramiko · iptables · tcpdump · inotify-tools · Telegram Bot API · systemd
